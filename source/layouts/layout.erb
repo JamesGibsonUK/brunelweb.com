@@ -7,7 +7,7 @@
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Brunel Web" %></title>
-    <%= stylesheet_link_tag "site" %>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/site.css">
 
 <script async src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
   </head>
@@ -31,5 +31,21 @@
 	  <script>
   feather.replace()
 </script>
+<noscript id="deferred-styles">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    </noscript>
+<script>
+   var loadDeferredStyles = function() {
+     var addStylesNode = document.getElementById("deferred-styles");
+     var replacement = document.createElement("div");
+     replacement.innerHTML = addStylesNode.textContent;
+     document.body.appendChild(replacement)
+     addStylesNode.parentElement.removeChild(addStylesNode);
+   };
+   var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+       webkitRequestAnimationFrame || msRequestAnimationFrame;
+   if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+   else window.addEventListener('load', loadDeferredStyles);
+ </script>
   </body>
 </html>
