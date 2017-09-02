@@ -6,14 +6,29 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title || "Middleman" %></title>
+    <title><%= current_page.data.title || "Brunel Web" %></title>
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "site" %>
 
 <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
   </head>
   <body>
+
+    <header>
+    	<div class="header-wrapper">
+    		<div class="header-brand"><img id="header-logo" src="/images/ship.svg" height="40px"><h2 class="header-title">Brunel Web</h2></div>
+    	<ul class="header-navigation">
+    		<li class="header-navigationItem header-navigationItemActive"><a href="/">Home</a></li>
+    		<li class="header-navigationItem"><a href="/contact">Contact</a></li>
+    	</ul>
+    	</div>
+    </header>
 	  <%= yield %>
+    <footer>
+    	<div class="footer-wrapper">
+    	<small>Copyright (c) 2017 Brunel Web. All Rights Reserved. </small>
+    	</div>
+    </footer>
 	  <script>
   feather.replace()
 </script>

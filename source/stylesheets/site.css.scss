@@ -1,10 +1,15 @@
-$primary: #0a2463;
 
+
+$primary: #0a2463;
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600');
+
+
+$max-width: 960px;
 
 body {
 	margin: 0;
 	padding: 0;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
 	padding-top: 86px
@@ -94,7 +99,7 @@ header {
 		text-align: center;
 	}
 
-	
+
 
 
 }
@@ -110,6 +115,14 @@ header {
 .welcome {
 	padding-top: 100px;
 	padding-bottom: 100px;
+}
+
+@media screen and (max-width: 750px) {
+
+	.welcome {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
 }
 
 .welcome-heading {
@@ -156,12 +169,19 @@ header {
 	color: white;
 }
 
+@media screen and (max-width: 750px) {
+	.welcome-callButton, .welcome-emailButton {
+		display: block;
+		margin-bottom: 10px;
+		padding-top: 4px;
+	}
+}
 
 .welcome-buttonIcon {
 	position: relative;
 	top: 6px;
 	margin-right: 3px;
-	
+
 
 }
 
@@ -176,7 +196,7 @@ header {
 	display: grid;
 	grid-gap: 20px;
 	grid-template-columns: 1fr 1fr;
-	padding-bottom: 100px;
+	padding-bottom: 80px;
 	padding-left: 10px;
 	padding-right: 10px;
 
@@ -197,12 +217,47 @@ grid-column: span 1;
 grid-column: span 1;
 }
 
+
+.testimonial-wrapper {
+	background-image: url('/images/pattern.png');
+	padding-top: 100px;
+	padding-bottom: 100px;
+
+
+}
+.testimonial{
+background-color: $primary;
+max-width: 960px;
+margin-right: auto;
+margin-left: auto;
+color: white;
+padding: 70px;
+}
+
+@media screen and (max-width: 750px) {
+	.testimonial {
+		padding: 30px;
+	}
+}
+
+.testimonial-quote {
+	font-size: 28px;
+	margin-left: 0;
+	margin-top: 0;
+}
+
+.testimonial-attribute {
+	opacity: 0.65;
+	font-size: 20px;
+	text-align: right;
+}
+
 footer {
 	background-color: $primary;
 	color: white;
 	padding-top: 50px;
 	padding-bottom: 50px;
-	text-align: left;
+	text-align: center;
 }
 
 .footer-wrapper {
@@ -211,4 +266,128 @@ footer {
 	margin-right: auto;
 	padding-left: 10px;
 	padding-right: 10px;
+}
+
+.blog-header {
+max-width: $max-width;
+margin-left: auto;
+margin-right: auto;
+margin-top: 100px;
+margin-bottom: 100px;
+
+color: $primary;
+border: 15px solid $primary;
+padding: 70px;
+}
+
+.blog-heading {
+	margin-top: 0;
+}
+
+.contact-header {
+	max-width: $max-width;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: $primary;
+	padding: 40px;
+	color: white;
+	margin-top: 100px;
+	margin-bottom:100px;
+}
+
+.contact-heading {
+	margin-top: 0;
+}
+
+
+
+.contact-form label, input {
+	display: block;
+}
+
+form {
+
+}
+
+input {
+	border: 1px solid #dddddd;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	font-size: 16px;
+	font-family: 'Raleway', sans-serif;
+	padding: 10px;
+	font-weight: normal;
+	color: rgba(0, 0, 0, 0.73);
+
+}
+textarea {
+	border: 1px solid #dddddd;
+	border-radius: 3px;
+	font: inherit;
+	font-size: 16px;
+	font-weight: normal;
+	margin-bottom: 17px;
+	width: 400px;
+	padding: 10px;
+	color: rgba(0, 0, 0, 0.73);
+}
+
+
+.contact-submit {
+	background-color: $primary;
+	font-weight: 700;
+	color: white;
+	border: 0;
+}
+
+#POST-email {
+	width: 250px;
+}
+
+.contact {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 1fr 1fr;
+
+	max-width: $max-width;
+	margin-left: auto;
+	margin-right: auto;
+
+	margin-bottom: 100px;
+
+}
+
+form {
+	grid-column: span 1;
+}
+
+.contact-details {
+	grid-column: span 1;
+}
+
+.contact-details {
+	color: white;
+	background-color: $primary;
+	padding: 30px;
+
+}
+
+.contact-details h2 {
+	margin-top: 0;
+}
+
+.contact-details ul {
+	margin-left: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+.contact-details ul li {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.contact-details ul li svg {
+	margin-right: 7px;
 }
