@@ -6,6 +6,12 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
           <meta name="format-detection" content="telephone=no">
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Brunel Web" %></title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/site.css">
@@ -16,7 +22,7 @@
 
     <header>
     	<div class="header-wrapper">
-    		<div class="header-brand"><img id="header-logo" src="/images/ship.svg" height="40px"><h2 class="header-title">Brunel Web</h2></div>
+    		<a class="header-logoWrapper" href="/"><div class="header-brand"><img id="header-logo" src="/images/ship.svg" height="40px"><h2 class="header-title">Brunel Web</h2></div></a>
     	<ul class="header-navigation">
     		<li class="header-navigationItem"><a href="/" id="homeLink">Home</a></li>
     		<li class="header-navigationItem"><a href="/contact" id="contactLink">Contact</a></li>
