@@ -26,7 +26,7 @@ page '/*.txt', layout: false
 #     which_fake_page: 'Rendering a fake page with a local variable'
 #   },
 # )
-
+proxy "_redirects", "netlify-redirects", ignore: true
 
 activate :livereload
 # Helpers
